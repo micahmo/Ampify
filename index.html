@@ -3,16 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <title>Ampify</title>
+	<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/hankchizljaw/boilerform@master/dist/css/boilerform.min.css" />
   </head>
   <body>
-	<div style="width:800px; margin:0 auto;">
-		<input type = "text"
-			   id = "URL"
-			value = ""/>
-
-		<input type = "submit"
-			   id = "submit"
-			value = "Submit"/>
-    </div>
+	<form class="boilerform" action="" method="post">
+		<fieldset class="c-form">
+			<legend class="c-form__heading">Contact form</legend>
+			<div class="c-form__row">
+				<label for="name" class="c-label">Name</label>
+				<input type="text" name="name" id="name" class="c-input-field" value="" autocorrect="off" required />
+			</div>
+			<div class="c-form__row">
+				<label for="email" class="c-label">Email</label>
+				<input type="email" name="email" id="email" autocapitalize="none" autocorrect="off" class="c-input-field" required />
+			</div>
+			<div class="c-form__row">
+				<label for="message" class="c-label">Your message</label>
+				<textarea name="message" id="message" class="c-input-field c-input-field--multiline" rows="10"></textarea>
+			</div>
+			<div class="c-form__row">
+				<button class="c-button" type="submit">Submit</button>    
+			</div>
+		</fieldset>
+	</form>
   </body>
 </html>
